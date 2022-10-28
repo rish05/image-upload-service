@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: Swagger Image Tagging Expriment - OpenAPI 3.0
+  description: |-
+    This is a sample Image Tagging Service for exprimenting with SCI calculation  based on the OpenAPI 3.0 specification.
+  contact:
+    email: r.a.kumar.banthia@accenture.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://localhost:8081/api/image
+tags:
+  - name: image
+    description: Upload image in database or bucket
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /upload-blob:
+    post:
+      tags:
+        - image
+      summary: UploadImage with Tag
+      description: UploadImage with Tag
+      operationId: uploadImageBlob
+      requestBody:
+        description: Upload Image with tag in database
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - image
+                - tag_name
+              properties:
+                image:
+                  type: string
+                  description: image file to upload
+                  format: binary
+                tag_name:
+                  type: string
+                  description: tagging of image
+                  
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                properties:
+                  message:
+                    type: string
+                    description: image file to upload
+                  data:
+                    type: object
+                    description: tagging of image
+                    properties:
+                      id:
+                        type: string
+                      image_name:
+                        type: string
+                      tag_name:
+                        type: string
+        '402':
+          description: Validation error
+        '500':
+          description: Internal Server error
+  /upload-bucket:
+    post:
+      tags:
+        - image
+      summary: UploadImage with Tag
+      description: UploadImage with Tag
+      operationId: uploadImageBlob
+      requestBody:
+        description: Upload Image with tag in database
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - image
+                - tag_name
+              properties:
+                image:
+                  type: string
+                  description: image file to upload
+                  format: binary
+                tag_name:
+                  type: string
+                  description: tagging of image
+                  
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                properties:
+                  message:
+                    type: string
+                    description: image file to upload
+                  data:
+                    type: object
+                    description: tagging of image
+                    properties:
+                      id:
+                        type: string
+                      image_name:
+                        type: string
+                      tag_name:
+                        type: string
+        '402':
+          description: Validation error
+        '500':
+          description: Internal Server error

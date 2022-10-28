@@ -1,0 +1,9 @@
+Tue Oct 11 2022 12:35:12 GMT+0000 (Coordinated Universal Time) - info: Server is running on port 8081.
+Tue Oct 11 2022 12:36:40 GMT+0000 (Coordinated Universal Time) - info: Server is running on port 8081.
+Tue Oct 11 2022 12:36:40 GMT+0000 (Coordinated Universal Time) - info: Synced db.
+Tue Oct 11 2022 12:37:09 GMT+0000 (Coordinated Universal Time) - error: Error in uploding and tagging image in controller Cannot read property 'mimetype' of undefined
+Tue Oct 11 2022 12:37:50 GMT+0000 (Coordinated Universal Time) - info: Server is running on port 8081.
+Tue Oct 11 2022 12:37:51 GMT+0000 (Coordinated Universal Time) - info: Synced db.
+Tue Oct 11 2022 12:37:55 GMT+0000 (Coordinated Universal Time) - error: Error in uploding and tagging image in controller Cannot read property 'mimetype' of undefined
+Tue Oct 11 2022 12:38:44 GMT+0000 (Coordinated Universal Time) - info: Successfuly uploaded image to bucket
+Tue Oct 11 2022 12:38:44 GMT+0000 (Coordinated Universal Time) - info: Successfuly saved the image with tag
